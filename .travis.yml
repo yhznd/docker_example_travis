@@ -1,0 +1,7 @@
+sudo: required
+services:
+  - docker
+script:
+  - docker build -t yunus/travis_example_node .
+  - docker images yunus/travis_example_node
+  - d
