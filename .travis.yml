@@ -4,3 +4,11 @@ services:
 script:
   - docker build -t yunus/travis_example_node .
   - docker images yunus/travis_example_node
+before_deploy:
+  - docker login -u 133563  -p 133563Aa?
+
+deploy:
+  provider: script
+  script: docker push yunus/travis_example_node
+  on:
+    branch: master
