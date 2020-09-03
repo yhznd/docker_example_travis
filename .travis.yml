@@ -12,5 +12,6 @@ before_deploy:
 deploy:
   provider: script
   script: docker push yunus/docker_example_travis
+  skip_cleanup: true
   on:
     branch: master
