@@ -1,14 +1,16 @@
 sudo: required
 services:
   - docker
+
 script:
-  - docker build -t yunus/travis_example_node .
-  - docker images yunus/travis_example_node
+  - docker build -t yunus/docker_example_travis .
+  - docker images yunus/docker_example_travis
+
 before_deploy:
   - docker login -u 133563  -p 133563Aa?
 
 deploy:
   provider: script
-  script: docker push yunus/travis_example_node
+  script: docker push yunus/docker_example_travis
   on:
     branch: master
