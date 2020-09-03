@@ -3,8 +3,8 @@ services:
   - docker
 
 script:
-  - docker build -t yunus/docker_example_travis .
-  - docker images yunus/docker_example_travis
+  - docker build -t 133563/docker_example_travis .
+  - docker images 133563/docker_example_travis
 
 before_deploy:
   - docker login -u "133563" -p "133563Aa?" docker.io
