@@ -7,11 +7,11 @@ script:
   - docker images yunus/docker_example_travis
 
 before_deploy:
-  - docker login -u 133563  -p 133563Aa?
+  - docker login -u "133563" -p "133563Aa?" docker.io
 
 deploy:
   provider: script
-  script: docker push yunus/docker_example_travis
+  script: docker push 133563/docker_example_travis
   skip_cleanup: true
   on:
     branch: master
